@@ -14,7 +14,7 @@ SYSTEM_PASSWORD = os.environ.get("APP_PASSWORD", "hieu123")
 GEMINI_API_KEY = "AQ.Ab8RN6LaiTW77XLVY37ChdgC0cvNf6eojENAuhHOHQVhG86zFg"
 
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 DATA_CACHE = {}
 CACHE_TTL = 600
