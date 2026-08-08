@@ -11,7 +11,7 @@ CORS(app)
 
 # --- CẤU HÌNH HỆ THỐNG & AI ---
 SYSTEM_PASSWORD = os.environ.get("APP_PASSWORD", "hieu123")
-GEMINI_API_KEY = "AQ.Ab8RN6LaiTW77XLVY37ChdgC0cvNf6eojENAuhHOHQVhG86zFg"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
@@ -83,11 +83,13 @@ def get_data():
 @app.route('/api/ask-ai', methods=['POST'])
 def ask_ai():
     prompt = request.json.get('prompt')
+    if not GEMINI_API_KEY:
+        return jsonify({"success": False, "reply": "Lỗi: Máy chủ Render chưa được cấu hình GEMINI_API_KEY!"})
+    
     try:
-        system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế bám sát với toeic nhất."
-        response = model.generate_content(f"{system_instruction}\n\nUser: {prompt}")
+        response = model.generate_content(f"Bạn là trợ lý học tiếng Anh thông minh Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cho ví dụ TOEIC.\n\nUser: {prompt}")
         return jsonify({"success": True, "reply": response.text})
-    except Exception as e:
+    except Exception as e: 
         return jsonify({"success": False, "reply": f"Lỗi AI: {str(e)}"})
 
 @app.route('/api/generate-quiz', methods=['POST'])
