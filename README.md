@@ -1,3 +1,8 @@
+Lỗi chính xác nằm ở chỗ bạn đang dùng 3 dấu nháy đơn `'''` thay vì 3 dấu phẩy ngược ````` để đóng khung lệnh `pip install...`. Do đó, Markdown không hiểu là bạn đã kết thúc đoạn code, dẫn đến việc toàn bộ nội dung phía dưới bị hút vào trong khung màu xám.
+
+Bạn hãy **Ctrl + A** xóa hết file cũ đi, và copy toàn bộ nội dung đã được sửa lỗi chuẩn chỉ dưới đây dán vào nhé (tôi đã căn chỉnh lại cả phần Step 2 và Step 3 cho đẹp mắt hơn):
+
+```markdown
 # 🚀 Hieu's Hub - Backend Server
 
 This is the Backend system (API Server) for the **Hieu's Hub** project - An English vocabulary learning and test preparation application integrated with an AI Assistant. 
@@ -26,19 +31,29 @@ The system provides 3 main APIs for the Frontend to communicate with:
 
 ### Step 1: Install Dependencies
 Ensure you have Python installed. Open your Terminal in the project directory and run the following command:
+
 ```bash
-pip install -r requirements.txt '''
+pip install -r requirements.txt
 
+```
 
+### Step 2: AI Configuration
 
-### Step 2: AI
 For the AI to function, you need to configure your Google Gemini API Key.
 Create an environment variable on your machine (or set it directly in the Terminal):
 
-Windows: set GEMINI_API_KEY=AIzaSy_Your_Key_Here...
-Mac/Linux: export GEMINI_API_KEY="AIzaSy_Your_Key_Here..."
+* **Windows:** `set GEMINI_API_KEY=AIzaSy_Your_Key_Here...`
+* **Mac/Linux:** `export GEMINI_API_KEY="AIzaSy_Your_Key_Here..."`
 
+### Step 3: Run the Server
 
-### Step 3 Run the Server
 Run the following command to start the server:
+
+```bash
 python app.py
+
+```
+
+```
+
+```
