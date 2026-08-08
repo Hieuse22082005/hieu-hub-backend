@@ -27,7 +27,7 @@ The system provides 3 main APIs for the Frontend to communicate with:
 ### Step 1: Install Dependencies
 Ensure you have Python installed. Open your Terminal in the project directory and run the following command:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt '''
 
 
 
