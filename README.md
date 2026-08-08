@@ -28,3 +28,17 @@ The system provides 3 main APIs for the Frontend to communicate with:
 Ensure you have Python installed. Open your Terminal in the project directory and run the following command:
 ```bash
 pip install -r requirements.txt
+
+
+
+## Step 2: Set Environment Variables
+For the AI to function, you need to configure your Google Gemini API Key.
+Create an environment variable on your machine (or set it directly in the Terminal):
+
+Windows: set GEMINI_API_KEY=AIzaSy_Your_Key_Here...
+Mac/Linux: export GEMINI_API_KEY="AIzaSy_Your_Key_Here..."
+
+
+Step 3: Run the Server
+Run the following command to start the server:
+python app.py
