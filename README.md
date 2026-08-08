@@ -42,8 +42,6 @@ Run the following command to start the server:
 ```bash
 python app.py
 
-```
 
-```
 
 ```
