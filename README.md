@@ -1,13 +1,3 @@
-Lỗi chính xác nằm ở chỗ bạn đang dùng 3 dấu nháy đơn `'''` thay vì 3 dấu phẩy ngược ````` để đóng khung lệnh `pip install...`. Do đó, Markdown không hiểu là bạn đã kết thúc đoạn code, dẫn đến việc toàn bộ nội dung phía dưới bị hút vào trong khung màu xám.
-
-Bạn hãy **Ctrl + A** xóa hết file cũ đi, và copy toàn bộ nội dung đã được sửa lỗi chuẩn chỉ dưới đây dán vào nhé (tôi đã căn chỉnh lại cả phần Step 2 và Step 3 cho đẹp mắt hơn):
-
-```markdown
-# 🚀 Hieu's Hub - Backend Server
-
-This is the Backend system (API Server) for the **Hieu's Hub** project - An English vocabulary learning and test preparation application integrated with an AI Assistant. 
-The system is built with **Python (Flask)**, processes data from Google Sheets using **Pandas**, and integrates the power of the **Google Gemini API**.
-
 ## 🛠️ Technologies Used
 * **Framework:** Python / Flask
 * **Cross-Origin:** Flask-CORS (Secure communication between FE and BE)
