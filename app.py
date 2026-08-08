@@ -11,7 +11,7 @@ CORS(app)
 
 # --- CẤU HÌNH HỆ THỐNG & AI ---
 SYSTEM_PASSWORD = os.environ.get("APP_PASSWORD", "hieu123")
-GEMINI_API_KEY = "AQ.Ab8RN6LH5S1fkz0-EFfobN1XXROv_OgUhUYLxMZuid3Ofd9f_g"
+GEMINI_API_KEY = "AQ.Ab8RN6LaiTW77XLVY37ChdgC0cvNf6eojENAuhHOHQVhG86zFg"
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-2.5-flash')
