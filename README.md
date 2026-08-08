@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 
 
-## Step 2: Set Environment Variables
+### Step 2: AI
 For the AI to function, you need to configure your Google Gemini API Key.
 Create an environment variable on your machine (or set it directly in the Terminal):
 
@@ -39,6 +39,6 @@ Windows: set GEMINI_API_KEY=AIzaSy_Your_Key_Here...
 Mac/Linux: export GEMINI_API_KEY="AIzaSy_Your_Key_Here..."
 
 
-Step 3: Run the Server
+### Step 3 Run the Server
 Run the following command to start the server:
 python app.py
