@@ -1,0 +1,7 @@
+streamlit
+pandas
+st-gsheets-connection
+google-generativeai
+Flask
+flask-cors
+gunicorn
