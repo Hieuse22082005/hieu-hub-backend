@@ -1,7 +1,5 @@
-streamlit
-pandas
-st-gsheets-connection
-google-generativeai
 Flask
 flask-cors
+pandas
+google-generativeai>=0.8.0
 gunicorn
